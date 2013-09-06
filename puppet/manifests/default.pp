@@ -140,7 +140,7 @@ exec { 'install_ruby':
   require => Exec['install_rvm']
 }
 
-exec { "${as_vagrant} 'gem install bundler --no-rdoc --no-ri'":
+exec { "${as_vagrant} 'gem install bundler rails --no-rdoc --no-ri'":
   creates => "${home}/.rvm/bin/bundle",
   require => Exec['install_ruby']
 }
